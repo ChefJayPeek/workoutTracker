@@ -1,8 +1,8 @@
 // Requiring necessary npm packages
 const express = require("express");
-const session = require("express-session");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+const db = require("./models");
 
 // Express Setup
 const PORT = process.env.PORT || 3000;
@@ -12,12 +12,13 @@ const app = express();
 app.use(logger("dev"));
 
 // Express Data parsing
-app.use(express.urlencoded({ extended: true}));
-app.use(express.json);
+app.use(express.urlencoded({ extended: true }));
+
+app.use(express.json());
 app.use(express.static("public"));
 
-
 // Database Connection
+const URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
 mongoose.connect(
     URI,
     {

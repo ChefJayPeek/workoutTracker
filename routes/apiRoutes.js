@@ -1,4 +1,3 @@
-const apiRoutes = require("../../Project2/routes/api-routes.js");
 const Workout = require("../models/workout.js");
 
 module.exports = (app) => {
