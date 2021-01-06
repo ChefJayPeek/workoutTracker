@@ -5,7 +5,7 @@ Workout tracker is an application using MongoDB to keep track of either cardio o
 To install 
     npm install
 
-Deployed to Heroku: 
+Deployed to [Heroku](https://stormy-dusk-10791.herokuapp.com). 
 
 Questions:
 GitHub Link: chefjaypeek
