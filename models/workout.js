@@ -11,7 +11,7 @@ const WorkoutSchema = new Schema(
             {
                 type: {
                     type: String,
-                    enum: ["cardo", "resistance"],
+                    enum: ["cardio", "resistance"],
                     required: true,
                 },
                 name: {
@@ -28,7 +28,7 @@ const WorkoutSchema = new Schema(
                         return this.type === "cardio";
                     },
                 },
-                wieght: {
+                weight: {
                     type: Number,
                     required: function() {
                         return this.type === "resistance";

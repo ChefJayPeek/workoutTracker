@@ -37,7 +37,7 @@ module.exports = (app) => {
     });
     // Get the Workout history for stats
     app.get("/api/workouts/range", (req, res) => {
-        renderWorkoutSummary.find()
+        Workout.find()
         // Limit to 7 days
         .limit(7)
         .then((data) => {
